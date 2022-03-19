@@ -1,0 +1,23 @@
+// Import Custom Variables
+@import "./assets/scss/variables.scss";
+
+// Import Bootstrap
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/functions.scss";
+// Import Custom SCSS
+@import "./assets/scss/global.scss";
+
+// Layout
+@import "./assets/scss/layout/authentication.scss";
+@import "./assets/scss/layout/dashboard-default.scss";
+@import "./assets/scss/layout/dashboard-fixed.scss";
+@import "./assets/scss/layout/error.scss";
+
+// Navigation
+@import "./assets/scss/navigation/nav.scss";
+@import "./assets/scss/navigation/topnav.scss";
+@import "./assets/scss/navigation/sidenav/sidenav.scss";
+@import "./assets/scss/navigation/sidenav/sidenav-dark.scss";
+@import "./assets/scss/navigation/sidenav/sidenav-light.scss";
+
+@import "~@ng-select/ng-select/themes/default.theme.css";

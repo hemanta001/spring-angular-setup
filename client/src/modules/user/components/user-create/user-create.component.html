@@ -1,0 +1,40 @@
+<form [formGroup]="userForm">
+
+  <div class="mb-3">
+    <div class="mb-3">
+      <label for="firstName" class="form-label">FirstName</label>
+      <input type="text" formControlName="firstName" class="form-control" id="firstName">
+    </div>
+    <div class="mb-3">
+      <label for="lastName" class="form-label">LastName</label>
+      <input type="text" formControlName="lastName" class="form-control" id="lastName">
+    </div>
+    <label for="email" class="form-label">Email</label>
+    <input type="email" formControlName="email" class="form-control" id="email">
+  </div>
+
+  <div class="mb-3">
+    <label for="role" class="form-label">Select*</label>
+    <ng-select [items]="roles"
+               id="role"
+               formControlName="roles"
+               placeholder="Select Role"
+               appendTo="body"
+               multiple="true"
+    >
+    </ng-select>
+  </div>
+
+  <div class="mb-3" *ngIf="!userId">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" formControlName="password" class="form-control" id="password">
+  </div>
+  <div class="mb-3">
+    <label for="mobileNumber" class="form-label">Mobile No*</label>
+    <input type="text" formControlName="mobileNumber" class="form-control" id="mobileNumber">
+  </div>
+
+
+  <button type="submit" [disabled]="!userForm?.valid || processing" class="btn btn-primary"
+          (click)="create$()">{{processing ? 'Processing' : (userId ? 'Update' : 'Save')}}</button>
+</form>
